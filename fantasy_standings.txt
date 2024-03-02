@@ -1,2 +1,2 @@
 Competitors, The Walkman, Prajser, driftmeister, dillmania
-Race1, Bahrain, Quali, 48, 56, 58, 54
+Race1, Bahrain, 160, 216, 199, 196

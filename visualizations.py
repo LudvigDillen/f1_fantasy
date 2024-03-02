@@ -17,9 +17,9 @@ def read_standings(filename):
 
             for line in file:
                 data = line.strip().split(", ")
-                race_name = f"{data[1]} {data[2]}"  # Combining race location and type
+                race_name = f"{data[1]}"  # Combining race location and type
                 race_details.append(race_name)
-                for competitor, pts in zip(competitors, data[3:]):
+                for competitor, pts in zip(competitors, data[2:]):
                     standings[competitor].append(
                         int(pts)
                     )  # Directly store points as integers
