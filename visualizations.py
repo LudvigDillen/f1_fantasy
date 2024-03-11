@@ -56,7 +56,12 @@ def plot_cumulative_scores(standings, race_details, competitors):
             race_details, cumulative_scores, label=competitor, marker="o", linestyle="-"
         )
 
-    plt.xlabel("Race and Type")
+        # Add annotation for the last point
+        last_race = race_details[-1]
+        last_score = cumulative_scores[-1]
+        plt.text(last_race, last_score, f"{last_score}", ha="right", va="bottom")
+
+    plt.xlabel("Race")
     plt.ylabel("Cumulative Points")
     plt.title("Cumulative Scores Over Races")
     plt.xticks(rotation=45)
@@ -66,7 +71,7 @@ def plot_cumulative_scores(standings, race_details, competitors):
 
 
 if __name__ == "__main__":
-    filename = "fantasy_standings_dummy.txt"
+    filename = "fantasy_standings.txt"
     standings, race_details, competitors = read_standings(filename)
 
     # For plotting individual race points
